@@ -1,0 +1,28 @@
+Given a user is not already logged in
+When they are on the login page
+Then they should see the option to sign up or login, but not to log out
+
+Given a user is already logged in
+When they are on the login page
+Then they should see the option to log out, but not to sign up or login
+
+Given a user has typed the correct username
+When they type the correct password
+Then they should be taken to their account profile screen
+
+Given a user has typed the correct username
+When they type an incorrect password
+Then they should remain on the login page and an error message should appear to say the wrong credentials have been entered
+
+Given a user has typed an incorrect username
+When they type the correct password
+Then they should remain on the login page and an error message should appear to say the wrong credentials have been entered
+
+Given a user has never logged in before
+When they sign up with their email and a password
+Then a message should appear that signup has been successful and they should be redirected to the login page
+
+Given a user already has an account
+When they sign up with their email and password
+Then an error message should appear to say that their email is already linked to an account, and they should remain on the sign up page
+
